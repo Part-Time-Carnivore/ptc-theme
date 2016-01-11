@@ -40,6 +40,7 @@ if (function_exists('register_sidebars')) {
     register_sidebars(1, array('name' => 'Pledge'));
     register_sidebars(3, array('name' => 'Mission %d'));
     register_sidebars(2, array('name' => 'Current %d'));
+    register_sidebars(1, array('name' => 'Ad'));
 }
 
 //* Include pledge.php
@@ -71,12 +72,12 @@ function include_home() {
 //* Include meat.php
 add_action( 'genesis_after_content', 'include_meat' );
 function include_meat() {
-	if ( !is_front_page() ) {
-		if ( !is_user_logged_in() ) {
+	if ( !is_user_logged_in() ) 	{
+		if ( !is_front_page() ) {
 			require(CHILD_DIR.'/meat.php');
-		} else {
-			require(CHILD_DIR.'/mission.php');
 		}
+	} else {
+			require(CHILD_DIR.'/mission.php');
 	}
 }
 
@@ -94,6 +95,10 @@ function include_sign() {
 	if ( !is_user_logged_in() ) {
   		require(CHILD_DIR.'/sign.php');
 	}
+}
+
+add_action( 'genesis_after_footer', 'include_ad' );
+function include_ad() {
   	require(CHILD_DIR.'/share.php');
 }
 

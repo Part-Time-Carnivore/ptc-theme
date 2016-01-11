@@ -396,6 +396,11 @@ textarea:focus {
 	color: #000;
 }
 
+#login form p.submit {
+	text-align:center;
+	padding:16px;
+}
+
 button,
 input[type="button"],
 input[type="reset"],
@@ -3355,6 +3360,20 @@ Site Footer
 	padding: 5rem 0;
 	text-align: center;
 	background-color:#353959;
+}
+
+.ad {
+	background: #e2e0d2;
+	color:#353959;
+}
+.ad a {
+	color:#353959;
+}
+.ad a:hover {
+	color:#bf3f4f;
+}
+.ad h2 {
+	margin-top:2rem;
 }
 
 .site-footer p,

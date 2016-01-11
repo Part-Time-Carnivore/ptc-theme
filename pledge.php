@@ -42,6 +42,6 @@
 </a>
 <div class="fix fixcentre"><span class="myteam"></span></div>
 <div class="fix fixright"><a href="<?php echo site_url('wp-login.php'); ?>">log in</a></div>
-<div class="fix fixleft"><a href="#nav_menu-2" class="navicon"><span>menu</span></a></div>
+<div class="fix fixleft"><a href="#nav_menu-2"><span class="navicon">&nbsp;</span><span>menu</span></a></div>
 </section>
 <div class="mainwrap">

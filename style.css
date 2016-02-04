@@ -883,6 +883,11 @@ Plugins
 	display:none;
 }
 
+.parent {
+	position:relative;
+	top: -12px;
+}
+
 #groups-directory-form h3 .button {
 	font-size:16px;
 	font-size:1.6rem;

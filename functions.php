@@ -185,3 +185,13 @@ function join_champions(){
 	}
 }
 add_action( 'gform_after_submission_5', 'join_champions' );
+
+function showparent(){
+	global $bp;
+	$parent_id = $bp->groups->current_group->parent_id;
+	if ($parent_id) {
+		$parent = groups_get_group( array( 'group_id' => $parent_id) );
+		echo '<a href="' . site_url() . '/' . bp_get_groups_root_slug() . '/' . $parent->slug . '" class="parent">' . $parent->name . '</a>';
+	}
+}
+add_action( 'bp_before_group_header_meta', 'showparent' );

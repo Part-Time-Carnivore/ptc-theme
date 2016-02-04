@@ -876,7 +876,7 @@ Plugins
 
 /* BuddyPress
 --------------------------------------------- */
-.visitor #item-header-content #item-meta p,
+#item-header-content #item-meta p,
 .hierarchy #groups-list .item-meta,
 .hierarchy #groups-list .item-desc,
 .hierarchy #groups-list .item-meta {

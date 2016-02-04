@@ -186,6 +186,7 @@ function join_champions(){
 }
 add_action( 'gform_after_submission_5', 'join_champions' );
 
+//* Link to parent team on team page header
 function showparent(){
 	global $bp;
 	$parent_id = $bp->groups->current_group->parent_id;
@@ -195,3 +196,29 @@ function showparent(){
 	}
 }
 add_action( 'bp_before_group_header_meta', 'showparent' );
+
+//* Start your team here...
+function startteam(){
+	echo '<ul id="groups-list" class="item-list startteam">
+
+			<li>
+			<div class="item-avatar">
+				<a href="' . site_url() . '/' . bp_get_groups_root_slug() . '/start-a-team/"><img src="http://www.parttimecarnivore.org/wp-content/uploads/2016/02/png" class="avatar group-25-avatar avatar-50 photo" width="50" height="50" alt="Start a team" title="Start a team"></a>
+			</div>
+
+			<div class="item">
+				<div class="item-title"><a href="' . site_url() . '/' . bp_get_groups_root_slug() . '/start-a-team/">Your Team</a></div>
+
+				
+			</div>
+
+			<div class="action">
+				<div class="meta">
+									<span><a href="' . site_url() . '/' . bp_get_groups_root_slug() . '/start-a-team/">Start a new team</a></span>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</li>
+	</ul>';
+}
+add_action( 'bp_after_groups_loop', 'startteam' );

@@ -1029,6 +1029,12 @@ div#message.info p {
 	min-width:700px;
 	padding: 10px 4px 0 4px;
 }
+
+.directory #content ul.startteam li, 
+.tag #content ul.startteam li {
+	margin-top: 0 !important;
+}
+
 .directory #content ul#groups-list li div.item-avatar,
 .tag #content ul#groups-list li div.item-avatar {
 	display:inline-block;

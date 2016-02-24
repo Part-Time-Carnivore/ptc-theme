@@ -209,9 +209,11 @@ jQuery(document).ready(function( $ ) {
 		//	Remember team
 		if (window.localStorage){
 			if ( $( '.thisteam' ).length ) {
+				//store team
 				var thisteam = $( '.thisteam' ).html();
 				localStorage.storedteam = thisteam;
 				var teams = [];
+				//store child teams
 				if ($('#toplevel-groups-list .item-title a').length){
 					$('#toplevel-groups-list .item-title a').each(function(i, element) {
 						teams.push($(this).html());
@@ -220,11 +222,20 @@ jQuery(document).ready(function( $ ) {
 				} else {
 					localStorage.removeItem('teams');
 				}
+				//store parent team
+				if ($('#item-header-content .parent').length){
+					var parentteam = $('#item-header-content .parent').html();
+					localStorage.parentteam = parentteam;
+				} else {
+					localStorage.removeItem('parentteam');
+				}
 			}
 			if (localStorage.storedteam){ 
 				$( '.myteam' ).append( localStorage.storedteam );
-				//Signup field replacement
-				$( '#gform_1 #field_1_5' ).remove();
+				if (localStorage.parentteam){
+					//Signup field replacement
+					$( '#gform_1 #field_1_5' ).remove();
+				}
 				var jointeam = $('.fix .myteam a').html();
 				//$( '#gform_1 #field_1_7 input' ).val(jointeam);
 				$( '#gform_1 #field_1_9 .gfield_label').append(': <span id="team-name">' + jointeam + '</span>');

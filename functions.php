@@ -199,7 +199,8 @@ add_action( 'bp_before_group_header_meta', 'showparent' );
 
 //* Start your team here...
 function startteam(){
-	echo '<ul id="groups-list" class="item-list startteam">
+	echo '<div>
+	<ul id="groups-list" class="item-list startteam">
 
 			<li>
 			<div class="item-avatar">
@@ -219,6 +220,7 @@ function startteam(){
 			</div>
 			<div class="clear"></div>
 		</li>
-	</ul>';
+	</ul>
+	</div>';
 }
 add_action( 'bp_after_groups_loop', 'startteam' );

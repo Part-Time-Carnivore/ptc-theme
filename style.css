@@ -879,7 +879,9 @@ Plugins
 #item-header-content #item-meta p,
 .hierarchy #groups-list .item-meta,
 .hierarchy #groups-list .item-desc,
-.hierarchy #groups-list .item-meta {
+.hierarchy #groups-list .item-meta,
+#group-dir-count-bottom,
+.my-groups .group-button {
 	display:none;
 }
 

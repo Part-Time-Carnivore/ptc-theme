@@ -1975,6 +1975,9 @@ body a.sd-button > span {
 /* BP Group Tags
 --------------------------------------------- */
 
+#gtags-top {
+  width: 100% !important;
+}
 #gtags-top-cloud {
 	margin:0 auto 16px;
 	max-width:800px;
@@ -2468,7 +2471,7 @@ Admin Bar
 	margin: 0;
 	font-size: 16px;
 	font-size: 1.6rem;
-	padding: 0 70px 8px 70px;
+	padding: 8px 70px 8px 70px;
 }
 .pledge {
 	box-sizing:content-box;
@@ -2598,8 +2601,10 @@ Admin Bar
 .fix .myteam {
 	display:none;
 }
-.unstuck .fix span {
+.unstuck .fix span,
+.unstuck .fix a {
 	display:inline;
+  position: static;
 }
 .navicon {
 	padding: 3px 24px 3px 0;
@@ -3676,7 +3681,6 @@ Media Queries
 
 @media only screen and (max-width: 782px) {
 	
-	
 	.site-title {
 		font-size: 40px;
 		font-size: 4rem;
@@ -3685,7 +3689,20 @@ Media Queries
 	.fix span {
 		display: none;
 	}
-
+  
+  .fix .navicon {
+    display: inline;
+    position: relative;
+    top: -12px;
+    left: -8px;
+  }
+  
+  .fixright a {
+    position: relative;
+    top: -12px;
+    right: -8px;
+  }
+  
 	h1,
 	.home .unstuck h1 span,
 	.page-id-192 .unstuck h1 span,
